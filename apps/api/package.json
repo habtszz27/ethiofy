@@ -1,0 +1,34 @@
+{
+  "name": "@superstreamer/api",
+  "version": "1.2.0",
+  "type": "module",
+  "exports": {
+    "./client": {
+      "default": "./client/index.ts"
+    }
+  },
+  "scripts": {
+    "dev": "bun --watch --inspect=ws://localhost:6499/sprs-api ./src/index.ts",
+    "build": "bun build ./src/index.ts --target=bun --outdir=./dist && cp -r ./src/db/migrations ./dist",
+    "check": "biome check ./src ./client"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/pg": "^8.11.10",
+    "config": "workspace:*",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.685.0",
+    "@aws-sdk/s3-request-presigner": "^3.685.0",
+    "@hono/zod-validator": "^0.4.2",
+    "bolt": "workspace:*",
+    "bullmq": "^5.49.2",
+    "hono": "^4.7.0",
+    "hono-openapi": "^0.4.4",
+    "kysely": "^0.27.4",
+    "pg": "^8.13.1",
+    "zod": "^3.24.2",
+    "zod-openapi": "^4.2.3"
+  }
+}
