@@ -1,0 +1,19 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@3.0.3/schema.json",
+  "changelog": "@changesets/cli/changelog",
+  "commit": false,
+  "fixed": [
+    [
+      "@superstreamer/api",
+      "@superstreamer/artisan",
+      "@superstreamer/app",
+      "@superstreamer/stitcher",
+      "docs"
+    ]
+  ],
+  "linked": [],
+  "access": "public",
+  "baseBranch": "changesets",
+  "updateInternalDependencies": "patch",
+  "ignore": []
+}
